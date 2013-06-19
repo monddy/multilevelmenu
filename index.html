@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>multilevelmenu - a jQuery plugin</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.multilevelmenu.min.js"></script>
+<style>
+body,div,ul,ol,li,h1,h2,h3,h4,h5{padding: 0;margin: 0;}
+ol,ul {list-style: none;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+h1,h2,h3,h4,h5{font-family:Helvetica,Arial,sans-serif}
+h1 {margin:0;font-size:48px;line-height:100px;text-align:center;text-shadow:2px 1px 2px #999}
+h2 {margin:-30px 0 10px 150px;font-size:18px;line-height:20px;text-align:center;color: #999;text-shadow:0px 1px 1px #ccc}
+body{background:#f5f5f5 url(images/gray_jean.png);font:12px/22px "simsun";}
+#demo{padding:20px 15px;margin:30px auto 0;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius:10px}
+#demo ul{float:left}
+#demo li{margin:3px;padding:3px 10px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}
+#contDisplay{text-align:center;height:24px;margin:30px 0 0 0}
+
+.doc{background-color:#fafafa;border:#666 dashed 1px;width:800px;margin:30px auto;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius:10px}
+.doc h3{background:#f6f6f6;background:-webkit-gradient(linear, 0 0, 0 100%, from(#dddddd), to(#f5f5f5));background:-moz-linear-gradient(top, #dddddd,#f5f5f5);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#dddddd,endColorstr=#f5f5f5,grandientType=1);border-bottom:#666 dashed 1px;font-size:18px;line-height:30px;text-align:center;-moz-border-radius: 10px 10px 0 0;-webkit-border-radius: 10px 10px 0 0 ;border-radius:10px 10px 0 0;}
+pre {color:#666;margin:12px 0;font-size:12px;padding:0 6px;font-family:monaco,"courier new",mono;text-shadow:0px 1px 1px #ccc}
+.contact{font:bold 18px/32px Helvetica,Arial,sans-serif;text-align:center}
+.contact a{color:#666;text-decoration:none}
+.contact a:hover{color:#069}
+
+</style>
+</head>
+
+<body>
+
+<h1>multilevelmenu</h1>
+<h2>a jQuery plugin</h2>
+<div id="demo" class="clearfix">
+</div>
+<div id="contDisplay"></div>
+
+<div class="doc">
+	<h3>JS</h3>
+	<pre>
+	$(function(){
+		$('#demo').multilevelmenu();
+	})
+	---------------------------------------------- or ----------------------------------------------
+	$(function(){
+		$('#demo').multilevelmenu({
+			liH:'22px',                      //菜单项高度
+			liBgColor:'#EAEED9',             //菜单项颜色
+			liHoverBgColor:'#DFE7CD',        //菜单项鼠标响应颜色
+			menuBgColor:'#fafafa',           //菜单区域背景颜色
+			menuWidth:960,                   //菜单区域宽度
+			eventType:'click',               //触发菜单展开的事件类型“click”or“mouseover”
+			fontSize:'14px',                 //字号
+			fontFamily:'microsoft YaHei',    //字体
+			dataUrl:'menuJsonFile4.json'     //菜单Json数据文件地址
+		})
+	})</pre>
+</div>
+
+<a href="https://github.com/monddy/multilevelmenu"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" /></a>
+
+<p class="contact"><a href="mailto:monddy.na@gmail.com">Monddy</a></p>
+
+<script type="text/javascript">
+$(function(){
+	$('#demo').multilevelmenu({
+		liH:'22px',
+		liBgColor:'#EAEED9',
+		liHoverBgColor:'#DFE7CD',
+		menuBgColor:'#fafafa',
+		menuWidth:960,
+		eventType:'click',
+		fontSize:'14px',
+		fontFamily:'microsoft YaHei',
+		dataUrl:'menuJsonFile4.json'
+	})
+})
+</script>
+</body>
+</html>
